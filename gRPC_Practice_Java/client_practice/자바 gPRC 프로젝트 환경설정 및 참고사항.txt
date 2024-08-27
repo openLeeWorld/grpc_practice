@@ -1,0 +1,3 @@
+gradle build -> run
+
+이 클라이언트는 gRPC_Practice_Go의 gRPC_server와 호환됨

@@ -1,0 +1,21 @@
+syntax = "proto3"; // protocol buffer version : 3
+package ecommerce; // prevent name clashes
+// import "google/protobuf/wrappers.proto"
+// 위와 같이 다른 protocol buffer 정의를 가져올 수 있음
+
+// Java 코드 생성 시 사용할 패키지 이름 및 경로를 지정 필요x
+
+service ProductInfo {
+    rpc addProduct(Product) returns (ProductID);
+    rpc getProduct(ProductID) returns (Product);
+}
+
+message Product { // Definition of message format / type
+    string id = 1;
+    string name = 2;
+    string description = 3; // Field(name-value pair) that holds unique field numbers
+}
+
+message ProductID {
+    string value = 1;
+}

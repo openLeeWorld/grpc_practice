@@ -1,0 +1,11 @@
+# 가상환경 (python m venv grpc_env) 생성 및 활성화 후 gRPC library 설치:
+pip install -r requirements.txt
+
+example.proto 작성
+
+# 컴파일 명령어
+python -m grpc_tools.protoc -I=. --python_out=. --grpc_python_out=. example.proto
+
+server.py 및 client.py 작성 후 실행
+
+이 폴더안에 client, server 둘 다 있음

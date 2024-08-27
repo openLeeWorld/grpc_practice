@@ -1,0 +1,19 @@
+go 언어 설치 후 go에서 gPRC 및 Protocol buffer 플러그인 설치)
+
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+
+%GOPATH/src/grpc_server 모듈로 함
+
+go mod init grpc_server
+
+example.proto작성 -> protoc --go_out=. --go-grpc_out=. example.proto로 example폴더에 pb파일 생성
+
+server.go 작성 
+
+go mod tidy로 의존성 정리 및 패키지 다운로드 
+
+go run server.go 로 실행
+
+(이 서버는 gRPC_practice_JAVA의 client_practice와 호환)
+
